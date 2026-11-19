@@ -1,8 +1,10 @@
 // News image contest entry point for Daily Globe Render.
 // This program copies the pre-rendered entry.png (a deterministic news-day poster)
 // to the output directory specified by MAKEFUN_OUTPUT_DIR or process.env fallback.
-// The entry depicts Tuesday 17 November 2026: masthead, six-continent map band,
-// and three columns of 30 regional headline cards in a front-page layout.
+// The entry depicts Wednesday 18 November 2026: masthead, regional story-count strip
+// (7 regions: Middle East, US, Asia, Europe, World, Ukraine, Africa), numbers band
+// with daily statistics, and 30 headline stories organized by time of day (Overnight,
+// Morning, Afternoon, Evening). Footer sources: Reuters, AP, BBC, NASA, WHO, UN News.
 // Determinism: two runs on the same machine write identical bytes (fs.copyFileSync is byte-exact).
 // No network required: the image is pre-rendered and committed to the repository.
 // Outside the grading container, output goes to process.env.MAKEFUN_OUTPUT_DIR;
