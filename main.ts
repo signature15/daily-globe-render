@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 // News image contest entry point for Daily Globe Render.
 // This program copies the pre-rendered entry.png (a deterministic news-day poster)
 // to the output directory specified by MAKEFUN_OUTPUT_DIR or process.env fallback.
@@ -12,7 +13,6 @@
 // inside the container, /output/entry.png is the destination.
 
 import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
 
 const sourceUrl = new URL('./entry.png', import.meta.url);
 const sourcePath = sourceUrl.pathname.replace(/^\/([A-Z]:)/, '$1');
